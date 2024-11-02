@@ -2,14 +2,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MatrixEffectApp());
+  runApp(const MatrixEffectApp());
 }
 
 // Main Application Entry
 class MatrixEffectApp extends StatelessWidget {
+  const MatrixEffectApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: MatrixEffect(),
@@ -37,7 +39,7 @@ class Dot {
 class MatrixEffectModel extends ChangeNotifier {
   List<Dot> dots = [];
   Offset touchLocation =
-      Offset(-1000, -1000); // Initial touch location offscreen
+      const Offset(-1000, -1000); // Initial touch location offscreen
   double dotSize = 3;
   double dotSpacing = 20;
   double touchBoundingSize = 50;
@@ -117,11 +119,13 @@ class DotCanvas extends CustomPainter {
 
 // Main Matrix Effect widget with GestureDetector for touch interactions
 class MatrixEffect extends StatefulWidget {
+  const MatrixEffect({super.key});
+
   @override
-  _MatrixEffectState createState() => _MatrixEffectState();
+  MatrixEffectState createState() => MatrixEffectState();
 }
 
-class _MatrixEffectState extends State<MatrixEffect>
+class MatrixEffectState extends State<MatrixEffect>
     with SingleTickerProviderStateMixin {
   late final MatrixEffectModel model;
   late final AnimationController controller;
@@ -133,7 +137,8 @@ class _MatrixEffectState extends State<MatrixEffect>
     super.initState();
     model = MatrixEffectModel();
     controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 16)) // 60 FPS target
+        vsync: this,
+        duration: const Duration(milliseconds: 16)) // 60 FPS target
       ..addListener(() {
         model.updateDots();
       })
@@ -150,7 +155,7 @@ class _MatrixEffectState extends State<MatrixEffect>
       },
       onPanEnd: (_) => setState(() {
         model.touchLocation =
-            Offset(-1000, -1000); // Reset touch location offscreen
+            const Offset(-1000, -1000); // Reset touch location offscreen
       }),
       child: Container(
         color: Colors.black,
@@ -189,9 +194,9 @@ class _MatrixEffectState extends State<MatrixEffect>
                                     dotColor.value = c;
                                   },
                                   child: Card(
-                                    margin: EdgeInsets.only(bottom: 40),
+                                    margin: const EdgeInsets.only(bottom: 40),
                                     color: c,
-                                    child: SizedBox(
+                                    child: const SizedBox(
                                       height: 20,
                                       width: 20,
                                     ),
