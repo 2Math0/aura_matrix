@@ -1,16 +1,8 @@
 # aura_matrix
 
-A new Flutter project.
 
-## Getting Started
+### Showcase
+<div style="text-align: center;">
+<video src="https://github.com/user-attachments/assets/a5712f6d-19aa-4b5e-abea-2d37e7f10274" width=100% height=100%/>
+</div>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
