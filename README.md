@@ -1,9 +1,11 @@
-# Aura Matrix Effect
+# aura_matrix
 
-Aura Matrix Effect is a Flutter application that generates an interactive matrix of dots that
-respond to touch. The grid of dots moves and reacts based on user input, creating a captivating
-visual effect. This project uses `MatrixEffectModel` to manage the dots and interactions
-and `AppConst` to hold the configuration constants.
+### Showcase
+<div style="text-align: center;">
+<video src="https://github.com/user-attachments/assets/a5712f6d-19aa-4b5e-abea-2d37e7f10274" width=100% height=100%/>
+</div>
+
+# Logic and UI for dot grid interaction
 
 ## Features
 
